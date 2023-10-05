@@ -1,17 +1,39 @@
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 100vw;
+    height: 100vh;
+}
+.profile-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
 }
 
-.card-preview {
-  width: 100vw;
+#profile-image {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+  background: #b9b9b9
 }
 
-#img-preview {
-  width: 100%;
+#file-input {
+    display: none;
 }
 
-.img-preview {
-  width: 100%;
+#change-photo-btn {
+    margin-top: 10px;
+    cursor: pointer;
+    background-color: #007BFF;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    width: 50%;
+    
 }
