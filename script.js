@@ -1,16 +1,24 @@
-const fileInput = document.getElementById('fileInput');
-const selectFileInput = document.getElementById('selectFileInput');
+// Seleciona elementos HTML
+const profileImage = document.getElementById('profile-image');
+const fileInput = document.getElementById('file-input');
+const changePhotoBtn = document.getElementById('change-photo-btn');
 
-const imgPreview = document.getElementById('img-preview');
+// Evento de clique no botão "Alterar Foto"
+changePhotoBtn.addEventListener('click', () => {
+    fileInput.click();
+});
 
-function sendFiles() {
-  // if (fileInput.value = "https://") { 
-  //   alert('Insira um URL válido!');
-  //   return;
-  // }
-  var newFile = fileInput.value;
-  imgPreview.innerHTML = `
-  <img class="img-preview" src="${newFile}" alt="">
-  `
-  console.log(newFile);
-}
+// Evento de mudança de arquivo de input de arquivo
+fileInput.addEventListener('change', (e) => {
+    const file = e.target.files[0];
+
+    if (file) {
+        const reader = new FileReader();
+
+        reader.onload = (e) => {
+            profileImage.src = e.target.result;
+        };
+
+        reader.readAsDataURL(file);
+    }
+});
