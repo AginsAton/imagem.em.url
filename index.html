@@ -1,8 +1,18 @@
-<div class="card-preview">
-  <div id="img-preview" alt=""></div>
-  <button onclick="sendFiles()">Coloca Imagem de perfil</button>
-</div>
-<div class="card-file">
-  <input type="url" id="fileInput" placeholder="Insira a url da imagem">
-  <input type="file" name="" id="selectFileInput">  
-</div>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Perfil de Imagem</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="profile-container">
+        <img id="profile-image" src="default.jpg" alt="Perfil">
+        <input type="file" id="file-input" accept="image/*" style="display: none;">
+        <button id="change-photo-btn">Alterar Foto</button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
